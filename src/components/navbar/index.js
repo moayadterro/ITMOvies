@@ -10,7 +10,7 @@ function NavBar({ background }) {
     <Styles background={background}>
       <div className={`container ${background ? "blur" : ""}`}>
         <Link to="/">
-          <img src={logo} alt="moviestack" className="logo" />
+          <img src={logo} alt="ITMOVIES" className="logo" />
         </Link>
 
         <div className="nav-items">

@@ -5,6 +5,7 @@ import {
   Chip,
   CircularProgress,
   Grid,
+  Skeleton,
   TextField,
 } from "@mui/material";
 import { getMovie, TMDB_IMAGE } from "utils/endpoints";
@@ -39,10 +40,15 @@ function MoviePage() {
       <Styles>
         <Grid container mt={8}>
           <Grid item md={4} className="movie-poster">
-            <img
-              alt={state.movie.title}
-              src={`${TMDB_IMAGE}/${state.movie.poster_path}`}
-            />
+            {state.isLoading ? (
+              <Skeleton variant="rect" width="240px" height="330px" />
+            ) : (
+              <img
+                alt={state.movie.title}
+                src={`${TMDB_IMAGE}/${state.movie.poster_path}`}
+              />
+            )}
+
             <p>{state.movie.title}</p>
             <div className="chips-container">
               {!state.isLoading &&

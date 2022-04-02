@@ -9,6 +9,7 @@ import { getPopularMoviesURL } from "utils/endpoints";
 import http from "utils/http";
 import MovieCard from "components/movie-card";
 import _ from "lodash";
+import Footer from "components/footer";
 
 const SkeletonStack = () => {
   return (
@@ -39,7 +40,7 @@ function HomePage(props) {
   }, []);
 
   return (
-    <AppTemplate nav={<NavBar background={poster} />}>
+    <AppTemplate nav={<NavBar background={poster} />} footer={<Footer />}>
       <Styles>
         <div className="poster" style={{ backgroundImage: `url(${poster})` }}>
           <div className="poster-content">

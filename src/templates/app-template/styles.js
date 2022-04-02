@@ -23,9 +23,6 @@ export const Styles = styled.div`
   }
 
   .app-template__footer {
-    bottom: 0px;
-    left: 0px;
-    z-index: 999;
-    position: fixed;
+    margin-top: 24px;
   }
 `;
